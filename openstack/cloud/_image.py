@@ -137,7 +137,10 @@ class ImageCloudMixin(openstackcloud._OpenStackCloudMixin):
             )
 
         return self.image.download_image(
-            image, output=output_file or output_path, chunk_size=chunk_size, stream=stream
+            image,
+            output=output_file or output_path,
+            chunk_size=chunk_size,
+            stream=stream,
         )
 
     def get_image_exclude(self, name_or_id, exclude):
